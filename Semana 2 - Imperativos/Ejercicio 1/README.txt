@@ -1,0 +1,1 @@
+Contador de caracteres, palabras y número de renglones de un texto cualesquiera.
