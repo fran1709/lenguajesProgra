@@ -66,5 +66,14 @@ func main() {
 	rotacion(&puntero, len(arrayOne))
 	fmt.Println(arrayOne)
 	fmt.Println(puntero)
-
 }
+
+/**
+-------------------------
+|		RESULTADOS		|
+-------------------------
+Rotacones hacia la izquierda = 3
+Rotaciones hacia la derecha = 7
+[0 1 2 3 4 5 6 7 8 9]
+[6 7 8 9 0 1 2 3 4 5]
+*/
