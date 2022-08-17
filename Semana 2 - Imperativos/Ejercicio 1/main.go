@@ -20,31 +20,14 @@ func contadorTexto(pTexto string) {
 	exclamtion := strings.Count(pTexto, "!")
 	dat := strings.Count(pTexto, ".")
 	arrov := strings.Count(pTexto, "@")
+	com := strings.Count(pTexto, ",")
 
 	totalWords := len(spliText)
-	totalChars := len(caracters) - spaces - asks - exclamtion - dat - arrov
-	lines := strings.Count(pTexto, "\n")
+	totalChars := len(caracters) - spaces - asks - exclamtion - dat - arrov - com - strings.Count(pTexto, "\n")
+	lines := strings.Count(pTexto, "\n") + 1
 
 	resultado(totalChars, totalWords, lines)
 }
-
-/**
-func repetition(pTexto string) map[string]int {
-
-	// using strings.Field Function
-	spliText := strings.Fields(pTexto)
-	dictionary := make(map[string]int)
-
-	for _, word := range spliText {
-		_, matched := dictionary[word]
-		if matched {
-			dictionary[word] += 1
-		} else {
-			dictionary[word] = 1
-		}
-	}
-	return dictionary
-}*/
 
 func main() {
 	var texto = "@"
@@ -52,3 +35,12 @@ func main() {
 		"como estás?"
 	contadorTexto(strings.ToLower(texto))
 }
+
+/**
+-------------------------
+|		RESULTADOS		|
+-------------------------
+Cantidad de caracteres ->  28
+Cantidad de palabras ->  6
+Cantidad de lineas ->  2
+*/
