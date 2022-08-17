@@ -43,10 +43,6 @@ func (pLista *ListaZapatos) venderCalzado(pMarca string, pCantidad int, pTallla 
 
 	} else if prod == -2 {
 		fmt.Println("Producto existencia 0.")
-		//fmt.Println("entro aca")
-		var slice ListaZapatos
-		slice = append((*pLista)[:prod], (*pLista)[prod+1:]...)
-		lCalzados = slice
 	} else {
 		fmt.Println("Producto inexistente ó cantidad excede la existente.")
 	}
@@ -81,7 +77,21 @@ func main() {
 	fmt.Println(lCalzados)
 
 	lCalzados.venderCalzado("mizuno", 1, 44) //vende con exito
-	lCalzados.venderCalzado("mizuno", 1, 44) //excede, no vende y notifica
+	lCalzados.venderCalzado("mizuno", 1, 44) //excede, no vende y notifica existencia 0.
 
 	fmt.Println(lCalzados)
 }
+
+/**
+-------------------------
+|		RESULTADOS		|
+-------------------------
+[{Nike 40000 42 2} {Nike 35000 37 4} {Adidas 43000 41 3} {Adidas 45000 38 5} {Mi
+zuno 65000 44 1} {Mizuno 60000 34 3} {Procs 20000 36 2} {Procs 32000 39 3} {Euro
+s 20000 42 4} {Euros 30000 35 6} {Converse 49000 40 7} {Converse 50000 43 3}]
+Producto vendido
+Producto existencia 0.
+[{Nike 40000 42 2} {Nike 35000 37 4} {Adidas 43000 41 3} {Adidas 45000 38 5} {Mi
+zuno 65000 44 0} {Mizuno 60000 34 3} {Procs 20000 36 2} {Procs 32000 39 3} {Euro
+s 20000 42 4} {Euros 30000 35 6} {Converse 49000 40 7} {Converse 50000 43 3}]
+*/
