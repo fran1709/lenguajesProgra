@@ -1,0 +1,1 @@
+Algoritmo rotacional de Array, de izquierda a derecha y viceversa.
